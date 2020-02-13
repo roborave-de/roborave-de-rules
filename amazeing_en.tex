@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[ngerman]{babel}
+\usepackage{ucs}
+\usepackage{multirow}
+\usepackage{xltxtra}
+\usepackage[utf8x]{inputenc}
+\usepackage{fontspec}
+\usepackage[automark]{scrpage2}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\pagestyle{scrheadings}
+\setmainfont[Mapping=tex-text]{Liberation Serif}
+\clearscrheadfoot
+\begin{document}
+\ohead{Last edit: \today}
+\title{Rules a-MAZE-ing Challenge 2018}
+
+ \begin{center}
+\includegraphics[width=0.5\textwidth]{logo.png}
+
+\huge \bfseries Rules a-MAZE-ing Challenge 2018
+  \end{center}
+  This is only an unofficial translation. In case of doubt, only the newest official version of the German rules will
+  count.
+  %Inhaltliche Änderungen im Vergleich zu den Regeln von 2017 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
+\section{Goal}
+To design, build, and program a robot that can follow a raised wooden maze without falling off. The faster you
+can complete the maze increases your overall score.
+\section{Who Can Play}
+Teams of \emph{2 to 4 players} in \emph{separate divisions} for:
+\begin{itemize}
+	\item Middle School (Age 10-13)
+	\item High School (Age 14-17)
+\end{itemize}
+\section{Required Materials}
+Autonomous robot, any platform, costing \euro{ 1500} or less, and meets the following design constraints,
+which will be verified during
+ \emph{Check-In}:
+\begin{itemize}
+\item Robot is not allowed to use any sensors to assist it in following the maze, wheel encoders are allowed.
+\item Robot can navigate a simple 46 cm straight, 90 degree right, 46 cm straight maze during check in.
+\item Volume of the robot must \emph{not} exceed 65030 cubic cm.
+\end{itemize}
+\section{General Rules of Play}
+\begin{itemize}
+\item The robot has 2 minutes to complete the maze, the clock runs backwards from 120 seconds.
+\item Within these 2 minutes you can do as many trials as you want. Only the trial with the highest
+number of points will be counted
+\end{itemize}
+\section{Challenge Specifications}
+The a-MAZE-ing tracks will all be identical and are constructed of wood that is approximately 24 cm wide and 2
+cm tall. There are various lengths, as determined by the division, with angles of any combination of 45, 90, and
+135 degrees that can turn in either direction.
+While all two divisions will utilize the same track, each division has a different finish line:
+.
+\begin{itemize}
+\item Middle School Division – Finish line will be halfway between the 5th and 6th angled turn
+\item High School Division – Finish line is at the end of the track
+\end{itemize}
+\section{Scoring Period}
+\par The way the earned points are counted for the challenge will be announced on the first day of the event.
+\section{Scoring}
+\begin{itemize}
+\item Each completed straight-away is worth 50 points and each completed angle is worth 100 points.
+\item If the robot falls off the maze before reaching the finish line, then the run is concluded, and the score received
+includes any portion of the maze that is completed in it’s entirety, but no time bonus points are awarded.
+\item emph{Time bonus} points are only awarded if the robot reaches the finish line before the 120 seconds ends. Any
+remaining time is then added to the maze score as a time bonus point value (the whole number part of the
+time).
+\end{itemize}
+\section{Scoring Matrix}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+	\multirow{2}*{Division} & 1. & 1. & 2. & 2. & 3. & 3. & 4. \\
+	& Straight & Turn & Straight &Turn & Straight &Turn & Straight  \\ \hline
+	MS (10-13) & 50 & 100 & 50 & 100 & 50 & 100 & 50   \\ \hline
+	HS (14-17) & 50 & 100 & 50 & 100 & 50 & 100 & 50  \\ \hline
+\end{tabular} \\ \vspace{\baselineskip}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+	\multirow{2}*{Division} & 4. & 5. & 5. & 6. & 6. & 7. & Total \\
+	& Turn & Straight & Kurve & Straight & Turn & Straight  & Score  \\ \hline
+	MS (10-13) & 100 & 50 & 100 & 50 & & & 800 \\ \hline
+	HS (14-17) & 100 & 50 & 100 & 50 & 100 & 50  & 950 \\ \hline
+\end{tabular}
+\end{center}
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[ngerman]{babel}
+\usepackage{ucs}
+\usepackage{multirow}
+\usepackage{xltxtra}
+\usepackage[utf8x]{inputenc}
+\usepackage{fontspec}
+\usepackage[automark]{scrpage2}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\pagestyle{scrheadings}
+\setmainfont[Mapping=tex-text]{Liberation Serif}
+\clearscrheadfoot
+\begin{document}
+\ohead{Regelstand: \today}
+\title{Regeln a-MAZE-ing Challenge 2018}
+
+ \begin{center}
+\includegraphics[width=0.5\textwidth]{logo.png}
+
+\huge                      % Schriftgröße einstellen
+\bfseries                   % Fettdruck einschalten
+Regeln a-MAZE-ing Challenge 2018
+  \end{center}
+  %Inhaltliche Änderungen im Vergleich zu den Regeln von 2017 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
+\section{Aufgabe}
+Baue und programmiere einen Roboter, der ohne herunterzufallen einer Strecke aus Holzstücken folgen
+kann. Je schneller die Strecke aus Holzstücken abgefahren werden kann, desto mehr Punkte können erreicht
+werden.
+\section{Wer kann teilnehmen?}
+Teams von \emph{2 bis 4 Spielern} in \emph{folgenden Altersgruppen}:
+\begin{itemize}
+	\item Altersgruppe 1 (Middle School): 10-13 Jahre
+	\item Altersgruppe 2 (High School): 14-17 Jahre
+\end{itemize}
+\section{Materialanforderungen}
+Autonomer Roboter basierend auf jeglicher Plattform, der maximal  \euro{ 1500} kostet und den folgenden
+Designanforderungen, die beim \emph{Check-In überprüft werden}, entspricht:
+\begin{itemize}
+\item Es dürfen \emph{keinerlei Sensoren} verwendet werden. Hierbei zählen auch Gyroskope als nicht erlaubte Sensoren. Die Benutzung von Tachowerten ist erlaubt.
+\item Der Roboter kann einem 46 cm langen geraden Holzstück folgen, eine 90°-Rechtskurve fahren und dann wieder
+einem 46 cm langem geraden Holzstück folgen.
+\item Das Volumen des Roboter darf 65030 cm$^{3}$ \emph{nicht} überschreiten.
+\end{itemize}
+\section{Spielregeln}
+\begin{itemize}
+\item Der Roboter hat \emph{2 Minuten} um die Strecke abzufahren.
+\item Innerhalb dieser Zeit können die Teams beliebig oft versuchen die Strecke abzufahren.
+\item Gewertet wird der Versuch mit der höchsten Punktzahl.
+\end{itemize}
+\section{Spielfeld}
+Die a-MAZE-ing-Tracks einer Altersgruppe sind alle identisch und aus 24 cm breite und 2 cm starke
+Holzstücken aufgebaut. Es gibt zahlreiche verschieden lange Holzbretter mit Winkeln von 45, 90, and 135
+Grad welche in jede beliebige Richtung ausgerichtet sein können.
+Obwohl alle Altersgruppen auf der gleichen Strecke fahren, ist die Ziellinie unterschiedlich
+\begin{itemize}
+\item Altersgruppe 1 (Middle School) – Ziellinie ist in der Mitte zwischen der fünften und der sechsten Abzweigung
+\item Altersgruppe 2 (High School) – Ziellinie ist am Ende der Strecke
+\end{itemize}
+\section{Wertungszeitraum}
+\par Die Art der Wertung der einzelnen Ergebnisse im Bezug auf den gesamten Wettbewerb wird am ersten Wettbewerbstag von den Schiedsrichtern bekanntgegeben. Änderungen der Wertungsmodalitäten bleiben den Schiedsrichtern vorbehalten.
+\section{Punktevergabe}
+\begin{itemize}
+\item Jede vollständig gefahrene Teilstrecke gibt 50 Punkte. Jede gefahrene Kurve gibt 100 Punkte. Vollständig gefahren bedeutet dass die Hinterräder die Linie überquert haben.
+\item Wenn der Roboter vor der Ziellinie von den Holzstücken abkommt, zählt dies als abgeschlossener Versuch mit den Teilpunkten nach untenstehender Tabelle. Wenn noch Zeit übrig ist können die Spieler einen erneuten Durchlauf versuchen um ein besseres Ergebnis zu erzielen. Der Zeit-Bonus für den Rest der Zeit  wird nur vergeben wenn der Roboter die Ziellinie überquert hat.
+\item \emph{Zeit-Bonus-Punkte} werden nur erzielt, wenn der Roboter die Ziellinie in unter 120 Sekunden erreicht. Jede
+verbleibende Sekunde zählt als 1 Punkt. Der Zeit-Bonus wird zu den erzielten Punkten addiert.
+\item Die Punkte erhält man nur wenn man das entsprechende Teilstück (Strecke oder Kurve) vollständig passiert hat.
+\end{itemize}
+\section{Punktetabelle}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+	\multirow{2}*{Altersgruppe} & 1. & 1. & 2. & 2. & 3. & 3. & 4. \\
+	& Strecke & Kurve & Strecke & Kurve & Strecke & Kurve & Strecke   \\ \hline
+	MS (10-13) & 50 & 100 & 50 & 100 & 50 & 100 & 50   \\ \hline
+	HS (14-17) & 50 & 100 & 50 & 100 & 50 & 100 & 50  \\ \hline
+\end{tabular} \\ \vspace{\baselineskip}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+	\multirow{2}*{Altersgruppe} & 4. & 5. & 5. & 6. & 6. & 7. & \multirow{2}*{Gesamt} \\
+	& Kurve & Strecke & Kurve & Strecke & Kurve & Strecke  &   \\ \hline
+	MS (10-13) & 100 & 50 & 100 & 50 & & & 800 \\ \hline
+	HS (14-17) & 100 & 50 & 100 & 50 & 100 & 50  & 950 \\ \hline
+\end{tabular}
+\end{center}
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[ngerman]{babel}
+\usepackage{ucs}
+\usepackage{multirow}
+\usepackage{xltxtra}
+\usepackage[utf8x]{inputenc}
+\usepackage{fontspec}
+\usepackage[automark]{scrpage2}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\pagestyle{scrheadings}
+\setmainfont[Mapping=tex-text]{Liberation Serif}
+\clearscrheadfoot
+\ohead{Regelstand: \today}
+\title{2020 SUMO Challenge Regeln}
+\makeatletter
+\let\inserttitle\@title
+\makeatother
+
+\begin{document}
+
+ \begin{center}
+\includegraphics[width=0.5\textwidth]{logo.png}
+
+\huge                      % Schriftgröße einstellen
+\bfseries                   % Fettdruck einschalten
+\inserttitle
+  \end{center}
+  %Inhaltliche Änderungen im Vergleich zu den Regeln von 2017 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
+\section{Ziel}
+Entwurf, Bau und Programmierung eines autonomen Roboters, der einen gegnerischen Sumoroboter suchen und aus einem erhöhten Ring schieben kann.
+\section{Divisionen/Massenklassen}
+Bitte entnehmen Sie der untenstehenden Tabelle, in welcher Division/Massenklasse Sie teilnehmen möchten.
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+	\multirow{2}*{1kg} & \multirow{2}*{2kg} & Lego Only 1Kg \\
+	& & (Optional) \\ \hline
+	%ES &  & ES \\ \hline
+	%MS & ** & MS \\ \hline
+	MS & MS & MS \\ \hline
+	HS & HS & HS \\ \hline
+	%** & UP & ** \\ \hline
+\end{tabular} \\ \vspace{\baselineskip}
+\end{center}
+
+\section{Roboter}
+Autonomer Roboter, jede beliebige Plattform, die 1.500 USD oder weniger kostet und die folgenden Designbeschränkungen erfüllt, die beim Robot Check-In überprüft werden.
+\begin{itemize}
+	\item Die maximale Größe des Roboters beträgt 25 cm x 18 cm ohne Höhenbeschränkung, gemessen mit allen beweglichen Komponenten in ihrer Ausgangsposition.
+	\item TODO \ldots
+\end{itemize}
+
+\end{document}

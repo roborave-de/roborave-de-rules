@@ -1,4 +1,4 @@
-main: amazeing_de.pdf amazeing_en.pdf jousting_de.pdf jousting_en.pdf linefollowing_de.pdf
+main: amazeing_de.pdf amazeing_en.pdf jousting_de.pdf jousting_en.pdf linefollowing_de.pdf linefollowing_en.pdf
 
 amazeing_de.pdf: amazeing_de.tex
 	xelatex amazeing_de.tex

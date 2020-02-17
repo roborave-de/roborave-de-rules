@@ -5,10 +5,13 @@
 \usepackage{xltxtra}
 \usepackage[utf8x]{inputenc}
 \usepackage{fontspec}
-\usepackage[automark]{scrpage2}
+\usepackage[automark]{scrlayer-scrpage}
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage{float}
 \pagestyle{scrheadings}
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \clearscrheadfoot
@@ -18,8 +21,7 @@
 \makeatletter
 \let\inserttitle\@title
 \makeatother
-
- \begin{center}
+\begin{center}
 \includegraphics[width=0.5\textwidth]{logo.png}
 
 \huge                      % Schriftgröße einstellen
@@ -102,14 +104,27 @@ Der "`Restzeitbonus"' wird nur dann gewährt, wenn alle vier Kerzen gelöscht si
 	\item Kerzen die bereits gelöscht wurden werden zu Hindernissen und geben somit keine Strafpunkte wenn sie nach ihrem Löschvorgang berührt werden.
 \end{itemize}
 In der untenstehenden Bewertungsmatrix finden Sie Einzelheiten zur Bewertung der Punkte während Ihres Laufs.
-%TODO
 \section{Punktetabelle}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-	 & 1. Kerze & 2. Kerze & 3. Kerze & 4. Kerze  \\ \hline
-	 Außerhalb Kreis & - & - & - & - \\ \hline
-	Berührung & 50 & 100 & 150 & 200 \\ \hline
-	Ohne Strafabzug & 100 & 200 & 300 & 400  \\ \hline
+        \begin{tabular}{|c|c|c|c|c|c|}
+	\hline \cellcolor[gray]{0.9}& \multicolumn{4}{c|}{\cellcolor[gray]{0.9}Anzahl gelöschter Kerzen} & \cellcolor[gray]{0.9} \\
+	\cline{2-5} \multirow{-2}{*}{\cellcolor[gray]{0.9}} & \cellcolor[gray]{0.9}1. Kerze & \cellcolor[gray]{0.9}2. Kerze & \cellcolor[gray]{0.9}3. Kerze & \cellcolor[gray]{0.9}4. Kerze & \multirow{-2}{*}{\cellcolor[gray]{0.9}Mögliche Gesamtpunktzahl}\\
+	%\cline{1-6} Außerhalb Kreis & - & - & - & - &  \multirow{3}{*}{1000}\\
+        \cline{1-6} \cellcolor[gray]{0.9}\makecell{Halbe Punkte \\ aufgrund Strafabzug} & 50 & 100 & 150 & 200 &  \multirow{2}{*}{1000} \\
+	\cline{1-5} \cellcolor[gray]{0.9}Volle Punktzahl & 100 & 200 & 300 & 400 & \\
+        \hline \multicolumn{5}{|c|}{\cellcolor[gray]{0.9}\makecell{Zeitbonus: Die Uhr zählt von 180 Sekunden herunter und stoppt, \\ wenn der Roboter die vierte Kerze löscht.}} & 0 - 180 \\
+        \hline
 \end{tabular}
 \end{center}
+\section{Tunierplan}
+\begin{itemize}
+        \item Die besten acht Mannschaften werden an der Endrunde teilnehmen.
+        \item Die aufsteigenden Teams werden entsprechend ihrer Gesamtpunktzahl in die Turnierliste gesetzt (siehe untenstehende Tabelle).
+        \item Der zweite Platz ("`Runner Up"') wird verwendet, um den 3. Platz auf der Grundlage des Ergebnisses der Halbfinalrunde zu bestimmen.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \def\svgwidth{\columnwidth}
+    \input{tournament_score.pdf_tex}
+\end{figure}
 \end{document}

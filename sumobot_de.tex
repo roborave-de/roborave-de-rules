@@ -9,6 +9,7 @@
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{float}
 \pagestyle{scrheadings}
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \clearscrheadfoot
@@ -27,123 +28,55 @@
 \bfseries                   % Fettdruck einschalten
 \inserttitle
   \end{center}
-  %Inhaltliche Änderungen im Vergleich zu den Regeln von 2017 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
 \section{Ziel}
 Entwurf, Bau und Programmierung eines autonomen Roboters, der einen gegnerischen Sumoroboter suchen und aus einem erhöhten Ring schieben kann.
 \section{Divisionen/Massenklassen}
 Bitte entnehmen Sie der untenstehenden Tabelle, in welcher Division/Massenklasse Sie teilnehmen möchten.
 \begin{center}
 \begin{tabular}{|c|c|c|} \hline
-	\multirow{2}*{1kg} & \multirow{2}*{2kg} & Lego Only 1Kg \\
+	\multirow{2}*{1kg} & \multirow{2}*{2kg} & Nur LEGO 1Kg \\
 	& & (Optional) \\ \hline
-	%ES &  & ES \\ \hline
-	%MS & ** & MS \\ \hline
-	MS & MS & MS \\ \hline
+	ES &  & ES \\ \hline
+	MS & ** & MS \\ \hline
 	HS & HS & HS \\ \hline
-	%** & UP & ** \\ \hline
+	** & UP & ** \\ \hline
 \end{tabular} \\ \vspace{\baselineskip}
 \end{center}
 
-% Dies sind die Klassen aus den Regeln 2019
-%	Klasse 			&& Altersgruppe 			&& Gewicht
-%	Mini SumoBot		&& 0					&&	1kg
-%	Medium SumoBot	&& 1 (Middle School): 10-13 Jahre	&&	2kg
-%	Mega SumoBot		&& 2 (High School/) : 14-17 Jahre	&&	3kg
-
-
 \section{Roboter}
-%\section{Materialanforderungen}
-% Autonomer Roboter basierend auf jeglicher Plattform, der maximal EUR 1500 kostet und den folgenden Designanforderungen, die beim Check-In überprüft werden, entspricht:
-Autonomer Roboter, jede beliebige Plattform, die 1.500 USD oder weniger kostet und die folgenden Designbeschränkungen erfüllt, die beim Robot Check-In überprüft werden.
+Autonomer Roboter, jede beliebige Plattform, der 1.500 USD oder weniger kostet und die folgenden Designbeschränkungen erfüllt, die beim Robot Check-In überprüft werden.
 \begin{itemize}
 	\item Die maximale Größe des Roboters beträgt 25 cm x 18 cm ohne Höhenbeschränkung, gemessen mit allen beweglichen Komponenten in ihrer Ausgangsposition.
-	\item Die Roboterklasse wird beim Check-In überprüft
-	\item Der Roboter kann die Kante des Rings vermeiden und seine Gegner suchen. Er in der Lage ist den Sumo-Ring von einer gegebenen Startposition zu navigieren.
-	\item Nur Teammitglieder dürfen den Roboter entwickeln, konstruieren und programmieren.
-	%\item Das Volumen des Roboters darf 400 cm^3 nicht überschreiten.
+	\item Größen- und Massenbeschränkungen werden während der gesamten Veranstaltung strikt durchgesetzt, um den Wettbewerb für alle Teilnehmer fair zu gestalten.
+	\item Gelenkige oder bewegliche Komponenten sind zulässig, solange sie den oben genannten Konstruktionsregeln entsprechen. Es gilt jedoch die Regel "`kein vorsätzlicher Schaden"' - das bedeutet, dass Flossen und Gleitplatten zwar in Ordnung sind, aber absichtlich zerstörende Mechanismen wie Schleifspinner oder Hämmer etc. nicht erlaubt sind.
+	\item In der Division "`Nur LEGO 1Kg"': Jeder LEGO-Roboter kann verwendet werden, muss aber vollständig aus LEGO-Markenteilen bestehen, autonom sein und den Designvorgaben entsprechen.
 \end{itemize}
 
-\section{Aufgabenbeschreibung}
-\subsection{Roboter Einschränkungen (Verboten)}
+\section{Wettbewerbsring}
+Ein schwarzer Kreis mit 100 cm Durchmesser und 5 cm weißem Rand auf 13 bis 20 mm dicker Platte. Die Oberfläche des Rings sollte 50 bis 80 mm über dem Boden liegen. (die Maße werden je nach den verwendeten lokalen Materialien leicht variieren).
 
+\section{Allgemeine Spielregeln und Punktevergabe}
 \begin{itemize}
-	\item Störgeräte, wie Infrarot-LEDs, die dazu benutzt werden den gegnerischen Infrarotsensor zu sättigen/übersteuern. % Ändern?
-	\item Teile die den Ring oder den/die Roboter beschädigen oder Zerstören könnten.
-	\item Teile deren Zweck die Beschädigung oder Zerstörung des gegnerischen Roboters ist. Normales Schieben oder Stoßen werden nicht als absichtliche Beschädigung gewertet.
-	\item Vorrichtungen die Flüssigkeiten, Puder, Gas oder andere Substanzen enthalten, um sie auf den Gegner zu werfen.
-	\item Klebrige Substanzen oder Klebstoffe, um die Bodenhaftung zu erhöhen.
-	\item Vorrichtungen, um die Bodenhaftung zu erhöhen, wie Magnete und Vakuumpumpen.
-	\item Scharfen Kanten (Es zählen alle Kanten, die leicht Haut verletzen können)
+	\item Jeder Roboter wird in einer Reihe von Wettkämpfen nach der "`Reihum-Methode"' antreten. Die Anzahl der Runden/Matches werden am Tag des Wettkampfes auf der Grundlage der Zeit und Anzahl der Roboter in jeder Kategorie bestimmt.
+	\item Ein Spiel ist beendet, wenn eine Mannschaft zweimal gegen ihren Gegner gewonnen hat. 3 Punkte die für einen Sieg, 1 Punkt für ein Unentschieden und 0 Punkte für eine Niederlage vergeben werden.
+	\item Die Punkte der Mannschaften werden während des Wettkampfs ausgezählt und angezeigt. Die besten 8 Mannschaften in jeder Kategorie werden für die Endspiele ausgewählt.
+	\item Die Mannschaften können auf offenen Spielfeldern trainieren, wobei sie sich mit anderen trainierenden Teams abwechseln müssen.
+	\item Die Roboter beginnen, indem sie die weiße Linie an den einander gegenüberliegenden Seiten des Tisches berühren. Sie können in jeder beliebigen Ausrichtung positioniert werden. Die Roboter müssen nach dem Drücken der Starttasten 3 Sekunden lang pausieren, damit das Teammitglied sich vom Ring zurückziehen kann.
+	\item Der Verlierer ist der Roboter, der den Ring zuerst verlässt, was als Berührung der Oberfläche definiert ist, auf der der Wettbewerbsring platziert ist. Der Schiedsrichter kann nach 60 Sekunden ein Unentschieden ausrufen oder bei "`gesperrten Robotern"' nach 5 Sekunden einen Neustart erzwingen, wenn er dies für richtig hält.
+	\item Die Roboterbediener dürfen ihre Roboter nicht berühren, es sei denn, der Schiedsrichter weist sie dazu an. Pro Spiel werden 5 Minuten zugeteilt, wenn es in dieser Zeit keinen Sieger gibt, wird es als unentschieden gewertet.
+	\item Konfliktlösung - während des Spiels sind die Entscheidungen des Schiedsrichters endgültig.
 \end{itemize}
 
-\subsection{Ring Spezifikationen}
+
+\section{Turnierplan}
 \begin{itemize}
-	\item Ein etwa ~122cm im Durchmesser weißer runder Bereich mit einer ~5cm dicken schwarzen Kante.
-	\item Der Sumo-Ring wird mit etwa 1.25 cm dickem Sperrholz oder andere passende nicht magnetische Materialien konstruiert.
-	\item Der Sumo-Ring soll mit an der Unterseite des Rings angebrachten Stützbalken um etwa ~2.54 cm vom Boden erhöht werden. Diese Stützen müssen mindestens 1cm von der Oberkante des Rings entfernt sein. % andere Maße?
+	\item Wir veranstalten in der Regel Turniere für die besten 8 Mannschaften. Sollte es jedoch aufgrund von Gleichstand mehr als 8 Teams geben, kann der Veranstaltungsleiter die Turniergröße auf 12 oder 16 erhöhen oder ein Turnier mit Gleichstand veranstalten, um auf 8, 12 oder 16 Teams zu kommen, die ein Turnier ausrichten.
+	\item Die aufsteigenden Teams werden entsprechend ihrer Gesamtpunktzahl in die Turnierklasse gesetzt. Unten sehen Sie ein Beispiel für unsere typische 8-Mannschafts-Turnierrunde.
+        \item Der zweite Platz ("`Runner Up"') wird verwendet, um den 3. Platz auf der Grundlage des Ergebnisses der Halbfinalrunde zu bestimmen.
 \end{itemize}
-
-\subsection{Platzierung des Roboters}
-\begin{itemize}
-	\item Jeweils drei Stellen der Kante des Ringes werden farblich markiert. Die Länge der Markierung beträgt etwa 20 cm und ist jeweils um 120° verschoben.
-	\item Nach den Instruktionen des Schiedsrichters, werden die Roboter auf dem Ring an eine farbige Markierung gestellt.
-	\item Roboter müssen mit der Vorderseite nach außen (vom Zentrum des Rings gesehen) aufgestellt werden. Sie sollen leicht über die innere Kante des schwarzen Ringes hinausragen.
-\end{itemize}
-
-% TODO: besseres Bild?
-\includegraphics[width=0.8\textwidth]{sumo_bot_ring.png}
-
-\section{Generelle Spielregeln}
-\begin{itemize}
-	\item SumoBot Spiele sind schnell und enden oft in einem Unentschieden. Jedes Team erhält eine Spiel-Karte für bis zu 25 Spiel. Die 10 besten Spiele ergeben den Punktestand.
-	\item Während der Punktephase wird jedem Team am Schiedsrichtertisch der Sumo-Ring für das nächste Spiel bekannt gegeben.
-	\item Es wird versucht immer drei Teams pro Spiel antreten zu lassen. Wenn dies nicht möglich ist, können aber auch nur 2 Teams antreten. (Die maximal erzielbaren Punkte reduzieren sich auf 3) % 2 oder 3 Punkte?
-	\item Wenn zwei SumoBots fast gleichzeitig herunterfallen, gewinnt der Roboter, der zuletzt den Boden berührt hat. Dies wird vom Schiedsrichter bestimmt und es werden dementsprechend Punkte vergeben.
-	\item Nur ein Teammitglied darf am Ring den Roboter starten. Die restlichen Teammitglieder müssen sich mit etwas Entfernung hinter dem eigenen SumoBot aufstellen.
-	\item Jedes Team tritt mit einem Roboter an, den das Team selbst nach den Spezifikationen dieses Dokumentes konstruiert hat.
-	\item Das Spiel startet mit dem Zeichen des Schiedsrichters und dauert eine Minute oder bis nur noch ein SumoBot im Ring steht.
-	\item Wenn sich die Roboter innerhalb eines Zeitraums von 5 Sekunden nicht oder kaum bewegt haben (ein Patt), wird die Uhr angehalten. Die Roboter werden zurück auf die Startposition gestellt und das Spiel wird mit der verbleibenden Zeit weitergeführt. Das Einschätzen eines Patts liegt im Ermessen des Schiedsrichters.
-	\item Die Entscheidungen des Schiedsrichters sind endgültig und entscheiden den Sieger des Spiels.
-	\item SumoBots die vom Spielrand gestoßen wurden sind aus dem laufenden Spiel ausgeschieden.
-\end{itemize}
-
-\section{Punkteermittlung}
-\begin{itemize}
-	\item Teams sammeln innerhalb eines Spiels zwischen 0 bis 4 Punkte. Die maximale Punktzahl in einem Spiel mit 2 SumoBots ist 3 und mit 3 SumoBots 4.
-	\item Jedes Mal, wenn ein SumoBot vom Rand des Ringes gestoßen wurde wird ein Punkt vergeben. Wenn zwei SumoBots in physischen Kontakt stehen und der dritte über die Kante gestoßen wird, erhalten beide verbleibenden Roboter einen Punkt.
-	\item Wenn nur ein Roboter im Ring verbleibt, bekommt er einen Punkt für das stehen im Ring und einen Bonuspunkt für das vorzeitige beenden des Spiels.
-	\item Wenn das Spiel endet erhalten alle im Ring verbleibenden Roboter einen Punkt.
-	\item Das Spiel wird angehalten und mit der verbleibenden Zeit neugestartet, wenn folgende Bedingungen erfüllt sind:
-	\begin{itemize}
-		\item Die verbleibenden SumoBots bewegen sich kaum oder nicht (ein Patt) innerhalb einer Zeit von 5 Sekunden
-		\item Wenn es nicht klar ist ob weitere Fortschritte nach Ablauf der Zeit erzielt werden, kann der Schiedsrichter das Spiel für bis zu 15 Sekunden verlängern.
-	\end{itemize}
-	\item Die 9 SumoBot-Teams mit dem höchsten Punktestand werden im finalen Wettkampf gegeneinander antreten.
-\end{itemize}
-
-\section{Wettkampf Punkteermittlung}
-% TODO: Überschriften ändern?
-
-Die top neun Teams werden in drei Gruppen eingeteilt wo sie in einem drei Runden Wettkampf antreten.
-
-Runde Eins: Jedes Team kämpft bis ein SumoBot aus dem Ring gestoßen wurde.
-\begin{enumerate}
-	\item  Die Verlierer SumoBots aus den drei Kämpfen werden eliminiert
-	\item  Der siebte, achte und neunte Platz wird anhand der Gesamtpunktzahl der eliminierten SumoBots bestimmt.
-\end{enumerate}
-
-Runde Zwei: Die verbleibenden sechs Teams kämpfen bis ein Sumobot aus dem Ring gestoßen wurde.
-\begin{enumerate}
-	\item Die Verlierer SumoBots aus den zwei Kämpfen werden eliminiert.
-	\item Der fünfte und sechste Platz wird anhand der Gesamtpunktzahl der eliminierten SumoBots bestimmt.
-\end{enumerate}
-
-Runde Drei: Die verbleibenden vier Teams kämpfen in einem alles oder nichts SumoBot Showdown. Die Roboter werden dabei jeweils in 90 Grad Intervallen im Ring aufgestellt.
- \begin{enumerate}
-	 \item Vierter Platz für den ersten SumoBot der aus dem Ring gestoßen wurde
-	 \item Dritter Platz für den zweiten SumoBot der aus dem Ring gestoßen wurde
-	 \item Zweiter Platz für den dritten SumoBot der aus dem Ring gestoßen wurde
-	 \item Der als letztes stehende SumoBot ist der Champion!
- \end{enumerate}
-
+\begin{figure}[H]
+    \centering
+    \def\svgwidth{\columnwidth}
+    \input{tournament_score.pdf_tex}
+\end{figure}
 \end{document}

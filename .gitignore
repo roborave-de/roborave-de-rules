@@ -1,4 +1,5 @@
 *.log
 *.pdf
+!tournament_score/*
 *.aux
 *.synctex.gz

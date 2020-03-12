@@ -5,126 +5,108 @@
 \usepackage{xltxtra}
 \usepackage[utf8x]{inputenc}
 \usepackage{fontspec}
-\usepackage[automark]{scrpage2}
+\usepackage[automark]{scrlayer-scrpage}
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{float}
 \usepackage[normalem]{ulem}
+\usepackage{xcolor,colortbl}
+\definecolor{Gray}{gray}{0.85}
 \pagestyle{scrheadings}
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \clearscrheadfoot
-\begin{document}
 \ohead{Regelstand: \today}
-\title{Regeln a-MAZE-ing Challenge 2020}
+\title{2020 a-MAZE-ing Challenge Regeln}
 
 \makeatletter
 \let\inserttitle\@title
 \makeatother
 
- \begin{center}
-\includegraphics[width=0.5\textwidth]{logo.png}
-
-\huge                      % Schriftgröße einstellen
-\bfseries                   % Fettdruck einschalten
-\inserttitle
-  \end{center}
-Inhaltliche Änderungen im Vergleich zu den Regeln von 2018 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
-
-
-\section{Aufgabe}
-Baue und programmiere einen Roboter, der ohne herunterzufallen einer Strecke aus Holzstücken folgen
-kann. Je schneller die Strecke aus Holzstücken abgefahren werden kann, desto mehr Punkte können erreicht
-werden.
-
-\section{Wer kann teilnehmen?}
-Teams von \emph{2 bis 4 Spielern} in \emph{folgenden Altersgruppen}:
-\begin{itemize}
-	\item Altersgruppe MS: 10-13 Jahre
-	\item Altersgruppe HS: 14-17 Jahre
-\end{itemize}
-
-\section{Materialanforderungen}
-Autonomer Roboter basierend auf jeglicher Plattform, der maximal  \euro{ 1500} kostet und den folgenden
-Designanforderungen, die beim \emph{Check-In überprüft werden}, entspricht:
-\begin{itemize}
-\item Es dürfen \emph{keinerlei Sensoren} verwendet werden. Hierbei zählen auch
-Gyroskope als nicht erlaubte Sensoren. Die Benutzung von Tachowerten ist erlaubt.
-\textbf{Sollten sich trotzdem Sensoren am Roboter befinden müssen diese von jeglicher Strom- oder
-Datenversorgung abgeklemmt werden bevor der Roboter antreten darf.}
-\item Das Volumen des Roboters darf 65030 cm$^{3}$ \emph{nicht} überschreiten.
-\end{itemize}
-
-\section{Spielregeln}
-\begin{itemize}
-\item Der Roboter hat \emph{2 Minuten} um die Strecke abzufahren.
-\item Innerhalb dieser Zeit können die Teams beliebig oft versuchen die Strecke abzufahren.
-\textbf{Ein neuer Versuch kann jedoch erst gestartet werden wenn der Roboter von der Strecke
-heruntergefallen ist.}
-\item \textbf{Ein Roboter zählt als heruntergefallen wenn irgendeines der Räder die Oberfläche der Strecke
-vollständig nicht mehr berührt.}
-\item Gewertet wird der Versuch mit der höchsten Punktzahl.
-\end{itemize}
-
-\section{Spielfeld}
-\begin{itemize}
-\item Die a-MAZE-ing-Tracks einer Altersgruppe sind alle identisch und aus 24 cm breiten und 2 cm starken
-Holzstücken aufgebaut.
-\item Es gibt zahlreiche verschieden lange Holzbretter mit Winkeln von 45, 90 und 135
-Grad.
-\item \textbf{Über die erlaubten Kombinationen gibt das Bild Auskunft. Insbesondere darf ein
-90-Grad-Winkel nicht unter Zuhilfenahme eines dreieckigen Verbinders gebildet werden, dreieckige 
-Verbinder dürfen nicht aneinander angrenzen und Verbinder müssen stets so ausgerichtet sein, dass
-jede Kante des Dreiecks entweder vollständig oder gar nicht an ein Holzstück angrenzt. \\}
-\includegraphics[width=1.0\textwidth]{amazeing_allowed.png}
-\item \textbf{Die Holzstücke werden im Normalfall mit Panzerklebeband (duct tape) aneinander befestigt.
-Es können jedoch auch andere Befestigungsarten wie z.B. Kleber oder Schrauben verwendet werden.
-Im Allgemeinen wird versucht die Strecke soweit möglich frei von Unregelmäßigkeiten zu halten.}
-\item \textbf{Die Schiedsrichter dürfen entscheiden ob die Strecken für die einzelnen Altersgruppen
-getrennt werden oder ob die Ziellinien der verschiedenen Altersgruppen lediglich durch Markierungen
-kenntlich gemacht werden.}
-\item Aufbau der Strecken für die Altersgruppen:
-\begin{itemize}
-\item Altersgruppe MS – Ziellinie ist in der Mitte zwischen der fünften und der sechsten Abzweigung
-\item Altersgruppe HS – Ziellinie ist am Ende der Strecke
-\end{itemize}
-\item \textbf{Die Linien die das Ende einer Kurve bzw. Gerade markieren sind in folgendem Bild sichtbar.\\}
-\includegraphics[width=1.0\textwidth]{amazeing_angle.png}
-\end{itemize}
-
-\section{Wertungszeitraum}
-\par Die Art der Wertung der einzelnen Ergebnisse im Bezug auf den gesamten Wettbewerb wird am ersten Wettbewerbstag von den Schiedsrichtern bekanntgegeben. Änderungen der Wertungsmodalitäten bleiben den Schiedsrichtern vorbehalten.
-
-\section{Punktevergabe}
-\begin{itemize}
-\item Jede gefahrene gerade Teilstrecke wird mit 50 Punkten bewertet. Jede gefahrene Kurve 
-wird mit 100 Punkten gewertet.
-\item \textbf{Eine Strecke gilt als gefahren wenn irgendein Teil des Roboters die Linie am Ende
-dieser Strecke überquert hat.}
-\item Wenn der Roboter vor der Ziellinie von den Holzstücken abkommt, zählt dies als
-abgeschlossener Versuch mit den Teilpunkten nach untenstehender Tabelle. Wenn noch Zeit übrig ist
-können die Spieler einen erneuten Durchlauf versuchen um ein besseres Ergebnis zu erzielen.
-Der Zeit-Bonus für den Rest der Zeit  wird nur vergeben wenn der Roboter die Ziellinie überquert hat.
-\item \emph{Zeit-Bonus-Punkte} werden nur erzielt, wenn der Roboter die Ziellinie in unter 120
-Sekunden erreicht. Jede verbleibende Sekunde zählt als 1 Punkt. Der Zeit-Bonus wird zu den
-erzielten Punkten addiert.
-\end{itemize}
-\section{Punktetabelle}
+\begin{document}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
-	\multirow{2}*{Altersgruppe} & 1. & 1. & 2. & 2. & 3. & 3. & 4. \\
-	& Strecke & Kurve & Strecke & Kurve & Strecke & Kurve & Strecke   \\ \hline
-	MS (10-13) & 50 & 100 & 50 & 100 & 50 & 100 & 50   \\ \hline
-	Summe MS & 50 & 150 & 200 & 300 & 350 & 450 & 500   \\ \hline
-	HS (14-17) & 50 & 100 & 50 & 100 & 50 & 100 & 50  \\ \hline
-	Summe HS & 50 & 150 & 200 & 300 & 350 & 450 & 500   \\ \hline
-\end{tabular} \\ \vspace{\baselineskip}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
-	\multirow{2}*{Altersgruppe} & 4. & 5. & 5. & 6. & 6. & 7. \\
-	& Kurve & Strecke & Kurve & Strecke & Kurve & Strecke    \\ \hline
-	MS (10-13) & 100 & 50 & 100 & 50 & &  \\ \hline
-	Summe MS & 600 & 650 & 750 & 800 &  &     \\ \hline
-	HS (14-17) & 100 & 50 & 100 & 50 & 100 & 50   \\ \hline
-	Summe MS & 600 & 650 & 750 & 800 & 900  & 950    \\ \hline
-\end{tabular}
+	\includegraphics[width=0.5\textwidth]{logo.png}
+
+	\huge                      % Schriftgröße einstellen
+	\bfseries                   % Fettdruck einschalten
+	\inserttitle
 \end{center}
+\section{Ziel}
+Entwerfe, baue und programmiere einen Roboter, der einem erhöhten Holzlabyrinth
+folgen kann, ohne herunterzufallen. Das Abschließen des Labyrinths vor dem
+Zeitlimit erhöht Deine Punktzahl um Bonuspunkte.
+
+\section{Altersgruppen}
+Die Teams, die an dieser Challenge teilnehmen, treten in den Altersgruppen
+Grundschule (ES) und Mittelstufe (MS) an. (Hinweis: Wenn in einer der beiden
+	Divisionen weniger als 5 Teams angemeldet sind, hat der Veranstaltungsleiter
+die Möglichkeit, die Altersgruppen zu kombinieren)
+
+\section{Roboter}
+Autonomer Roboter, basierend auf beliebiger Plattform, der \euro{1.500}  oder weniger kostet und die folgenden Designbedingungen erfüllt, die beim Check-In überprüft werden:
+\begin{itemize}
+	\item Der Roboter darf keine externen Sensoren verwenden, die ihm helfen, dem Labyrinth zu folgen; jedoch sind Drehgeber (Motor Encoder) erlaubt.
+	\item Das Volumen des Roboters darf 65030 cm$^{3}$ nicht überschreiten.
+\end{itemize}
+
+\section{Allgemeine Spiel- und Punktregeln}
+\begin{itemize}
+	\item Der Veranstalter legt die Anzahl der erlaubten offiziellen Läufe fest und die Anzahl dieser offiziellen Läufe, die für die Gesamtpunktzahl gezählt werden, die zur Ermittlung der Top-8-Teams, die an dem Turnier teilnehmen werden, verwendet wird.
+	\item Der Roboter hat 2 Minuten Zeit, um das Labyrinth abzuschließen, wobei die Uhr von 120 Sekunden rückwärts läuft.
+	\item Die Teams können nach Bedarf üben, wobei sie sich mit anderen übenden Teams abwechseln. Sollte die Bahn für einen offiziellen Lauf benötigt werden, geben die Übungsteams die Bahn ab.
+	\item Jede abgeschlossene Gerade ist 50 Punkte wert. Eine Gerade gilt als abgeschlossen, wenn ein beliebiger Teil des Roboters über den Beginn der Markierungslinie der Wertungszone fährt.
+	\item Jeder abgeschlossene Winkel ist 100 Punkte wert. Ein Winkel gilt als abgeschlossen, wenn ein beliebiger Teil des Roboters über den Beginn der Markierungslinie der Wertungszone fährt.
+	\item Wenn der Roboter aus dem Labyrinth fällt, bevor er die Ziellinie erreicht hat, und noch Zeit übrig ist, bringe ihn zur Startlinie zurück und versuche, das Labyrinth zu beenden.
+	\item Ein Roboter gilt als aus dem Labyrinth gefallen, wenn eines seiner Räder die Oberfläche des Labyrinths \textbf{VOLLSTÄNDIG} nicht mehr berührt.
+	\item Wenn der Roboter das Labyrinth nach Ablauf der Zeit nicht beendet, entspricht der Punktestand demjenigen zurückgelegten Abschnitt der Strecke, der am weitesten vom Start entfernt ist.
+	\item Wenn der Roboter das Labyrinth vor Ablauf der Zeit fertigstellt, entspricht die Punktzahl der maximalen Punktzahl für seine Altersgruppe, zuzüglich eines Bonus, bestehend aus 1 Punkt für jede verbleibende Sekunde.
+\end{itemize}
+
+\section{Spielfeld Spezifikation}
+\begin{itemize}
+	\item Alle a-MAZE-ing Strecken werden so nah wie möglich an der
+		Zeichnung sein und aus Leimholz (oder einem ähnlichen lokal
+		beschafften Material) von 24 cm Breite und 2 cm Höhe gebaut. Es
+		gibt verschiedene Längen mit Kombinationen von 45, 90 und 135
+		Grad Kurven in beide Richtungen. (Anmerkung: Alle Challenge
+		Maße sind ungefähre Angaben).
+\end{itemize}
+\includegraphics[width=1.0\textwidth]{amazeing_allowed.png}
+\begin{itemize}
+	\item Die Teile werden normalerweise mit starkem Gewebeklebeband zusammengeklebt. Sie können jedoch auch mit Schrauben oder geklebten Verzahnungen verbunden werden. Unabhängig von der verwendeten Methode werden alle erforderlichen Maßnahmen ergriffen, um sicherzustellen, dass die Schienen so glatt und frei von Unregelmäßigkeiten wie möglich sind.
+	\item In der Altersgruppe ES gibt es 4 Geraden und 3 Kurven was insgesamt 500 Punkte ermöglich.
+	\item In der Altersgruppe MS gibt es 6 Geraden und 5 Kurven was insgesamt 800 Punkte ermöglich.
+	\item Abhängig vom Veranstaltungsraum und dem verfügbaren Material können beide Altersgruppe auf der längeren MS-Strecke betrieben werden. In diesem Fall befindet sich die Ziellinie der Altersgruppe ES irgendwo zwischen der 3. und 4. abgewinkelten Kurve der MS-Bahn.
+
+	\item Wertungslinien:
+		\begin{enumerate}
+			\item Das folgende Diagramm zeigt die Platzierung der Bewertungslinien für jeden der drei Winkeltypen.
+			\item Start und Ziel sind markiert
+			\item Die Wertungslinien am Ende jeder Geraden und jeder Kurve sind mit den auf der Fahrt vom Start bis zum Ziel akkumulierten Punkten beschriftet (dies vereinfacht die Überwachung der Punkte).
+				\begin{center}
+					\begin{tabular}{|c|c|c|c|c|c|} \hline
+						\rowcolor{Gray}
+						1. Gerade & 1. Kurve & 2. Gerade & 2. Kurve & 3. Gerade & 3. Kurve  \\ \hline
+						50 & 150 & 200 & 300 & 350 & 450  \\ \hline
+						\rowcolor{Gray}
+						4. Gerade & 4. Kurve & 5. Gerade & 5. Kurve & 6. Gerade & \\ \hline
+						500 (ES Ziel) & 600 & 650 & 750 & 800 (MS Ziel) & \\ \hline
+					\end{tabular}
+				\end{center}
+		\end{enumerate}
+		\includegraphics[width=1.0\textwidth]{amazeing_angle.png}
+\end{itemize}
+
+\section{Turnierplan}
+\begin{itemize}
+	\item Die besten 8 Mannschaften jeder Altersklasse treten in einem Turnier gegeneinander an.
+	\item Gleichstand wird auf der Grundlage eines vom Veranstalter gewählten LEISTUNGSKRITERIUMS aufgelöst. (Zum Beispiel: die höchste Einzelwertung aller gleichwertigen Mannschaften).
+	\item Die aufsteigenden Teams werden entsprechend ihrer Gesamtpunktzahl in die Turnierklasse gesetzt (siehe untenstehende Tabelle).
+		\begin{figure}[H]
+			\centering
+			\def\svgwidth{\columnwidth}
+			\input{tournament_score/tournament_score.pdf_tex}
+		\end{figure}
+	\item Der zweite Platz ("`Runner Up"') wird verwendet, um den 3. Platz auf der Grundlage des Ergebnisses der Halbfinalrunde zu bestimmen.
+\end{itemize}
 \end{document}

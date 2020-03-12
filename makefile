@@ -28,7 +28,7 @@ sumobot_de.pdf: sumobot_de.tex
 
 
 clean:
-	rm *.pdf
-	rm *.log
-	rm *.aux
-	rm *.synctex.gz
+	rm -f *.pdf
+	rm -f *.log
+	rm -f *.aux
+	rm -f *.synctex.gz

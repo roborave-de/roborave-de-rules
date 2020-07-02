@@ -5,135 +5,211 @@
 \usepackage{xltxtra}
 \usepackage[utf8x]{inputenc}
 \usepackage{fontspec}
-\usepackage[automark]{scrpage2}
+\usepackage[automark]{scrlayer-scrpage}
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor,colortbl}
+\definecolor{Gray}{gray}{0.85}
 \pagestyle{scrheadings}
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \clearscrheadfoot
-\begin{document}
 \ohead{Regelstand: \today}
-\title{Regeln Linefollowing Challenge 2018}
+\title{2020 Linefollowing Challenge Regeln}
 
- \begin{center}
-\includegraphics[width=0.5\textwidth]{logo.png}
+\makeatletter
+\let\inserttitle\@title
+\makeatother
 
-\huge                      % Schriftgröße einstellen
-\bfseries                   % Fettdruck einschalten
-Regeln Linefollowing Challenge 2018
-  \end{center}
-  %Inhaltliche Änderungen im Vergleich zu den Regeln von 2017 sind \textbf{fett} markiert. Im Zweifel ist die Interpretation der Regeln durch die Schiedsrichter bindend.
-\section{Aufgabe}
-Baue und programmiere einen Linienfolger-Roboter, der einer schwarzen Linie auf weißem Untergrund zu
-einem Karton folgen kann und zunächst mindestens einen Ball dorthin liefert und dann zum Start zurückkehrt.
-Anschließend kann er in der verbleibenden Zeit (3 Minuten) zum Karton zurückkehren (so oft wie nötig) um
-eine für jede Altersgruppe \emph{festgelegte} Zahl an Bällen (nicht mehr und nicht weniger) zum Karton zu liefern.
-\section{Wer kann teilnehmen?}
-Teams von \emph{2 bis 4 Spielern} in \emph{folgenden Altersgruppen}:
+\begin{document}
+\begin{center}
+	\includegraphics[width=0.5\textwidth]{logo.png}
+
+	\huge                      % Schriftgröße einstellen
+	\bfseries                   % Fettdruck einschalten
+	\inserttitle
+\end{center}
+
+\section{Ziel}
+Entwerfe, konstruiere und programmiere einen Linienfolge-Roboter, der (in drei
+Minuten) einer schwarzen Linie auf weißem Hintergrund zu einem Turm folgen und
+mindestens einen (1) Ball abgeben und dann zu seinem Ausgangspunkt zurückkehren
+kann. In der verbleibenden Zeit kehrt er zum Turm zurück (so oft wie nötig), um
+eine bestimmte Anzahl (nicht über oder unter) von Bällen gemäß den Vorgaben der
+jeweiligen Altersgruppe des Teams abzugeben.
+
+\section{Altersgruppen}
+
+Die Teams dieser Challenge treten in unterschiedlichen Altersgruppen an:
 \begin{itemize}
-		\item Altersgruppe MS: 10-13 Jahre
-		\item Altersgruppe HS: 14-17 Jahre
-		\item Altersgruppe UP: 18-20 Jahre
+	\item ES
+	\item MS
+	\item HS
+	\item UP
 \end{itemize}
-\section{Materialanforderungen}
-Ein autonomer Roboter basierend auf jeglicher Plattform der maximal \euro{1500} kostet und die folgenden
-Designanforderungen erfüllt, welche während des Check-Ins am ersten Wettbewerbstag überprüft werden:
 
+\section{Anforderungen}
+Autonomer Roboter, basierend auf beliebiger Plattform, der \euro{1.500}  oder
+weniger kostet und die folgenden Designbedingungen erfüllt, die beim Check-In
+überprüft werden:
 \begin{itemize}
-	\item Der Roboter muss zeigen, dass er ein Linienfolgerprogramm benutzt, indem er die letzten 60 cm der
-	diesjährigen Strecke abfährt (Wenn in den letzten 60 cm eine Abzweigung ist, startet der Roboter direkt hinter
-	dieser Abzweigung)
-	\item Der Roboter muss zeigen, dass er vor dem Turm anhält (er muss nicht zeigen, dass er Bälle liefern oder sich
-	umdrehen kann)
-	\item Das Volumen des Roboters darf 65030 cm3 nicht überschreiten.
+	\item Der Roboter kann auf einer Teststrecke demonstrieren, dass er
+		ein Linienfolge-Programm ausführt.
+	\item Der Roboter kann demonstrieren, dass er beim Erreichen des Turms
+		anhält; es muss nicht nachgewiesen werden, dass er eine Kugel
+		auswerfen oder sich umdrehen kann.
 	\item Mehrere Sensoren und Prozessoren sind erlaubt.
+	\item Das Volumen des Roboters darf 65030 cm3 nicht überschreiten.
 \end{itemize}
-\section{Spielregeln}
-\begin{itemize}
-	\item Ein Linienfolger-Programm muss die Bewegung des Roboters steuern
-	\item Der Roboter muss die Aufgabe innerhalb von 3 Minuten bewältigen
-	\item Nur Spieler dürfen während dem Durchlauf den Roboter berühren, keine Coaches
-	\item Der \emph{Karton} darf nicht von Personen berührt werden
-	\item \textbf{Ebenso ist es nicht erlaubt die Bewegung der Bälle aus dem Karton manuell
-	zu beschleunigen.}
-	\item \textbf{Wenn ein Spieler den Karton berührt oder in den Karton greift, erhält das Team lediglich
-	400 Punkte für die Strecke egal wie viele Bälle geliefert werden.}
-	\item Wenn der Roboter von einem Spieler berührt wird, muss er zurück auf den Startpunkt gesetzt werden
-	\item Offizielle Strecken werden bei der Vorbereitung zur Übung bereitgestellt
-\end{itemize}
-\section{Spielfeld}
 
-\emph{Die Strecke:}
+\section{Allgemeine Spielregeln}
 \begin{itemize}
-	\item Weiße PVC-Plane \textbf{oder Papier}
-	\item Altersgruppe 1 – Eine Abzweigung, 1,3 cm dicke schwarze Linie
-	\item Altersgruppen 2 \& 3 – Zwei Abzweigungen, 0,75 cm dicke schwarze Linie
-	\item \textbf{Vor dem Karton befindet sich eine gerade Strecke von mindestens 20 cm.}
-	\item \textbf{Die Linie zur Markierung der Strecke befindet sich nie näher als 10 cm
-	an einer anderen Linie oder der Kante des Plans.}
-	\item \textbf{Anderer Text auf dem Plan befindet sich immer mindestens 10 cm von der Linie
-	entfernt}
-	\item \textbf{Die Kurven können sich im Radius unterscheiden, aber keine Kurve darf einen
-	Radius kleiner als 15 cm für die Altersgruppe MS oder 10 cm für die Altersgruppen HS und UP haben.}
-	\item \textbf{Das Licht am Ort der Strecke kann sich über die Tageszeit ändern. Teams müssen
-	auf diese Bedingungen vorbereitet sein.}
-	\item \textbf{Die Altersgruppe MS und HS haben jeweils eine eigene Strecke. Ob für die
-	Altersgruppe UP die HS-Strecke oder eine eigens dafür erstellte verwendet wird obliegt der
-	Entscheidung der Schiesrichter.}
-	\item \textbf{ Die Schiedsrichter können entscheiden die Öffnung des Kartons für die
-	Altersgruppe UP zu verkleinern.}
+	\item Der Veranstalter legt die Anzahl der erlaubten offiziellen Läufe
+		fest und die Anzahl dieser offiziellen Läufe, die für die
+		Gesamtpunktzahl gezählt werden, die zur Ermittlung der
+		Top-8-Teams, die an dem Turnier teilnehmen werden, verwendet
+		wird.
+	\item Der Roboter hat 3 Minuten Zeit, um diese Aufgaben zu erledigen.
+	\item Ein Linienfolgeprogramm muss die Bewegung Deines Roboters zu
+		jeder Zeit kontrollieren.
+		%can?
+	\item Nur die Spieler dürfen den Roboter während des Laufs bedienen und
+		handhaben. Denkt daran: ``Spieler spielen, Trainer trainieren,
+		Eltern jubeln''.
+	\item Der Turm darf während der Auslieferung der Nutzlast von niemandem
+		berührt werden.
+	\item \textbf{Kein Herausschaufeln von Kugeln aus dem Turm durch eine
+		Person während der Auslieferung der Nutzlast.}
+	\item Wenn der Roboter zu irgendeinem Zeitpunkt berührt wird, muss er
+		hochgehoben und zum Startpunkt zurückgebracht werden.
 \end{itemize}
+
+\section{Spezifikationen des Challenge Equipments}
+
+\subsection{Der Turm}
+Größenangaben sind Richtwerte von denen es leichte Abweichungen geben kann.
+\begin{itemize}
+	\item Alle Altersgruppen benutzen 20 cm hohen x 10 cm breiten x 35 cm
+		langen Turm mit einer 10×10 cm großen Öffnung an der Oberseite
+		und einer offenen Rückwand, aus der die Bälle bei der
+		Auslieferungen herausrollen können. Der Karton ist mit
+		Klebeband am Spielplan fixiert.
+	\item Wenn ein Punktrichter sieht, dass ein Team Mitglied den Turm
+		berührt oder in diesen hineingreift, wird der Lauf abgebrochen
+		und das Team bekommt nur 400 Punkte für das Absolvieren des
+		Challenge Parcours unabhängig davon wieviele Bälle ausgeliefert
+		wurden.
+\end{itemize}
+\subsection{Der Spielplan}
+\begin{itemize}
+	\item Die Spielpläne werden üblicherweise auf stabilem Papier oder PVC-Plane gedruckt.
+	\item Altersgruppe ES – Keine Abzweigungen, 1,25 cm schwarze Linie
+	\item Altersgruppe MS – Eine Abzweigung, 1,25 cm schwarze Linie
+	\item Altersgruppen HS \& BK – Zwei Abzweigungen, 0,75 cm schwarze Linie
+	\item Jedes Jahr wird ein neues Design erstellt
+	\item Es führen mindestens 20 cm gerade Linie direkt zum Turm hin
+	\item Die Linie wird nicht weniger als 10 cm vom Rand des Spielplanes
+		oder von irgendeiner anderen Linie entfernt sein
+	\item Werbung oder gedruckte Anweisungen können überall auf dem
+		Spielplan platziert sein, müssen aber einen Abstand von
+		mindestens 10 cm zu den Linien einhalten.
+	\item Die Kurven können sich im Radius unterscheiden, aber keine Kurve
+		darf einen Radius kleiner als 15 cm für die Altersgruppe MS oder 10 cm für die
+		Altersgruppen HS und UP haben.
+\end{itemize}
+\subsection{Spielplan Beispiele}
 \includegraphics[width=0.3\textwidth]{track_ms_lf.png}
 \includegraphics[width=0.3\textwidth]{track_hs_lf.png}
-
-\emph{Der Karton:}
+\emph{Die abgebildeten Spielpläne sind \textbf{Beispiele}. Das Design ändert sich von Jahr zu
+Jahr und wird am ersten Tag des Wettbewerbes veröffentlicht.}
+\subsection{Andere wichtige Punkte }
 \begin{itemize}
-\item Alle Altersgruppen benutzen denselben Karton , der ungefähr 20 cm hoch ist und ein 10×10 cm großes Loch
-an der Oberseite und eine offene Rückwand hat. Der Karton ist mit Klebeband fest am Untergrund befestigt
-\item Es kann durch die Veranstalter ein Mechanismus zum Zählen der Bälle im Karton angebracht werden, der die
-Bewegung der Bälle nicht behindert
+	\item Die Challenge kann an Orten mit natürlichen Licht stattfinden
+		welches die Lichtverhältnisse auf dem Spielplan verändert.
+		Teams sollten darauf vorbereitet sein, diese natürlichen
+		Bedingungen zu meistern.
+	\item Die Veranstaltungsleitung kann entscheiden den HS Spielplan für
+		die Altersgruppe UP zu verwenden oder einen schwierigeren
+		Spielplan zu erstellen. Außerdem kann die Öffnung des Turms für
+		die Altersgruppe UP verkleinert werden
 \end{itemize}
-\emph{Die Strecke und der Karton dürfen nicht modifiziert werden!}
-\section{Wertungszeitraum}
-\par Die Art der Wertung der einzelnen Ergebnisse im Bezug auf den gesamten Wettbewerb wird am ersten Wettbewerbstag von den Schiedsrichtern bekanntgegeben. Änderungen der Wertungsmodalitäten bleiben den Schiedsrichtern vorbehalten.
 \section{Punktevergabe}
-Die Gesamtpunktzahl ist die Summe der Punkte aus der ersten Fahrt zum Karton und den Bällen, die während
-den weiteren Fahrten zum Karton geliefert werden.
+Die Gesamtpunktzahl ist die Summe der Punkte aus:
 \begin{itemize}
-\item Jede Altersgruppe hat eine \textbf{von den Schiedsrichtern zu Beginn des Wettbewerbs festgelegte} Anzahl an Bällen, die sie zum Karton liefern muss:
-\begin{itemize}
-	\item Altersgruppe MS - \textbf{zwischen 125 und 200 Bällen}
-\item Altersgruppe HS – \textbf{zwischen 200 und 250 Bällen}
-\item Altersgruppe UP - \textbf{zwischen 100 und 350 Bällen (die Zahl ist niedrig sollten die Schiedsrichter
-entscheiden die Öffnung des Kartons zu verkleinern)}
+	\item Absolvieren des Parcours zum Turm
+	\item Ausliefern von mindestens einem Ball
+	\item Rückkehr des Roboters zum Ausgangspunkt
+	\item Wiederholtes Absolvieren des Parcours so oft bis die
+		erforderliche Anzahl an Bällen augeliefert wurde
 \end{itemize}
-\item Wenn \emph{mehr} Bälle zum Karton geliefert wurden als die festgelegte Anzahl werden alle zusätzlichen Bälle von
-der festgelegten Anzahl \emph{subtrahiert} um die Punktzahl zu erhalten. Wenn weniger oder gleich viele Bälle zum
-Karton geliefert werden, ist die Anzahl der gelieferten Bälle die Punktzahl.
-\item Der während der ersten Fahrt gelieferte Ball wird nicht als Bonuspunkt gezählt, sondern dient lediglich dazu
-zu zeigen, dass der Roboter zum Transport von Bällen in der Lage ist. Es muss während der ersten Fahrt nur
-1 Ball zum Karton geliefert werden. In der ersten Runde mehr Bälle als einen zum Karton zu liefern hat weder
-positive noch negative Konsequenzen. Die Bälle von der ersten Fahrt werden vor dem Zählen entfernt.
-\item Wenn der Roboter die benötigte Anzahl an Bällen vor Ablauf der 3 Minuten zum Karton geliefert hat sollte er
-anhalten
-In der Punktetabelle sind die Punkte für die erste Fahrt zum Karton aufgelistet.
+
+Jede Altersgruppe hat eine vorgegebene Anzahl an Bällen auszuliefern. Die
+Zahlen werden am Tag des Wettbewerbes veröffentlicht. Dies sind die Bereiche
+aus welchen die Anzahl Bälle der Altersgruppen gewählt sein müssen:
+\begin{itemize}
+	\item Altersgruppe ES - zwischen 75 und 125 Bällen
+	\item Altersgruppe MS - zwischen 125 und 200 Bällen
+	\item Altersgruppe HS – zwischen 200 und 250 Bällen
+	\item Altersgruppe UP - zwischen 100 und 350 Bällen (die Zahl ist
+		niedrig sollte die Öffnung des Turms verkleinern sein)
+\end{itemize}
+
+Die Anzahl Punkte die für die erste Fahrt zum Turm und zurück in den
+entsprechenden Altersgruppe vergeben werden, kann der untenstehenden
+Punktetabelle entnommen werden.
+
+\subsection{Ein erfolgreicher Lauf ist wie folgt definiert:}
+\begin{itemize}
+	\item Der Roboter absolviert den Parcour vom Startpunkt zum Turm,
+		liefert mindestens einen Ball aus und kehrt entlang des
+		Parcours wieder zum Ausgangspunkt zurück. Alle während dieses
+		Durchlaufs ausgelieferten Bälle werden entfernt und werden
+		nicht als Bonuspunkte gezählt
+	\item Es kann mehrerer Versuche bedürfen die oben genannten Aufgaben zu
+		erledigen. Sobald alle Aufgaben erledigt wurden, können die
+		Teams Bonuspunkt Läufe durchführen.
+	\item Bei einem Bounspunkt Lauf absolviert der Roboter den Parcours vom
+		Startpunkt zum Turm und liefert die in der Altersgruppe
+		geforderte Anzahl Punkte aus. Während der Bonuspunkt Läufe muss
+		der Roboter nicht dem Parcours vom Turm zurück zum Startpunkt
+		folgen
+\end{itemize}
+\subsection{Punktevergabe beim Ausliefern von Bonusbällen}
+\begin{itemize}
+	\item Wenn die Anzahl der Bälle unter der erforderlichen Anzahl Bälle
+		liegt, ist die die Anzahl der Bonuspunkte
+	\item Wenn die Anzahl der Bälle über der erforderlichen Anzahl Bälle
+		liegt, dann wird der Überschuss von der erforderlichen Anzahl
+		abgezogen und das Ergebnis ist die die Anzahl der Bonuspunkte
 \end{itemize}
 \section{Punktetabelle}
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-	\multirow{3}*{} & Verlässt & Passiert erste & Passiert zweite & Stoppt vor dem & Liefert einen \\
-	 & Startpunkt & Abzweigung & Abzweigung & Karton & Ball zum Karton \\ \hline
-	10-13 (MS) & 25 & 25 & n.v. & 100 & 100 \\ \hline
-	14-17 (HS) & 25 & 25 & 25 & 50 & 100 \\ \hline
-	18-20 & 25 & 25 & 25 & 50 & 100 \\ \hline
-\end{tabular}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-	\multirow{3}*{} & Startet den & Passiert erste & Passiert zweite & Kommt am & Gesamt \\
-	& Rückweg & Abzweigung & Abzweigung & Startpunkt an &  \\ \hline
-	10-13 (MS) & 25 & 25 & n.v. & 100 & 400 \\ \hline
-	14-17 (HS) & 25 & 25 & 25 & 100 & 400 \\ \hline
-	18-20 & 25 & 25 & 25 & 100 & 400 \\ \hline
-\end{tabular}
+	\begin{tabular}{|c|c|c|c|c|c|} \hline
+		\multirow{3}*{} & Verlässt & Passiert erste & Passiert zweite & Stoppt vor dem & Liefert einen \\
+		& Startpunkt & Abzweigung & Abzweigung & Karton & Ball zum Karton \\ \hline
+		ES & 50 & k.A & k.A & 100 & 100 \\ \hline
+		MS & 25 & 25 & k.A & 100 & 100 \\ \hline
+		HS/UP & 25 & 25 & 25 & 50 & 100 \\ \hline
+	\end{tabular}
+	\begin{tabular}{|c|c|c|c|c|c|} \hline
+		\multirow{3}*{} & Startet den & Passiert erste & Passiert zweite & Kommt am & Gesamt \\
+		& Rückweg & Abzweigung & Abzweigung & Startpunkt an &  \\ \hline
+		MS & 50 & k.A. & k.A. & 100 & 400 \\ \hline
+		MS & 25 & 25 & k.A. & 100 & 400 \\ \hline
+		HS/UP & 25 & 25 & 25 & 100 & 400 \\ \hline
+	\end{tabular}
 \end{center}
+\section{Tunierplan}
+\begin{itemize}
+        \item Die besten acht Mannschaften werden an der Endrunde teilnehmen.
+        \item Die aufsteigenden Teams werden entsprechend ihrer Gesamtpunktzahl in die Turnierliste gesetzt (siehe untenstehende Tabelle).
+        \item Der zweite Platz ("`Runner Up"') wird verwendet, um den 3. Platz auf der Grundlage des Ergebnisses der Halbfinalrunde zu bestimmen.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \def\svgwidth{\columnwidth}
+    \input{tournament_score/tournament_score.pdf_tex}
+\end{figure}
 \end{document}

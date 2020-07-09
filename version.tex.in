@@ -1,0 +1,3 @@
+\newcommand{\commitID}{@COMMIT_ID@}
+\newcommand{\tagYear}{@TAG_YEAR@}
+\newcommand{\commitDate}{@COMMIT_DATE@}

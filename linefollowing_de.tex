@@ -5,25 +5,26 @@
 \usepackage{xltxtra}
 \usepackage[utf8x]{inputenc}
 \usepackage{fontspec}
-\usepackage[automark]{scrlayer-scrpage}
 \usepackage{eurosym}
 \usepackage{graphicx}
 \usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{makecell}
+\usepackage[table]{xcolor}
 \usepackage{float}
 \usepackage[normalem]{ulem}
 \usepackage{xcolor,colortbl}
 \definecolor{Gray}{gray}{0.85}
+\usepackage[automark]{scrlayer-scrpage}
 \pagestyle{scrheadings}
-\setmainfont[Mapping=tex-text]{Liberation Serif}
 \clearscrheadfoot
-\ohead{Regelstand: \today}
-\title{2020 Linefollowing Challenge Regeln}
-
+\setmainfont[Mapping=tex-text]{Liberation Serif}
+\begin{document}
+\input{version.tex}
+\ohead{Regelstand: \commitDate, id: \commitID}
+\title{\tagYear\ Line Following Challenge Regeln}
 \makeatletter
 \let\inserttitle\@title
 \makeatother
-
-\begin{document}
 \begin{center}
 	\includegraphics[width=0.5\textwidth]{logo.png}
 

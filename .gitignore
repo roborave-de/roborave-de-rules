@@ -3,3 +3,4 @@
 !tournament_score/*
 *.aux
 *.synctex.gz
+build*/

@@ -27,7 +27,7 @@ else()
 		COMMAND_ECHO STDOUT
 		)
 	execute_process(
-		COMMAND ${GIT_BIN} describe --tags
+		COMMAND ${GIT_BIN} describe --tags --abbrev=0
 		OUTPUT_VARIABLE TAG_YEAR
 		OUTPUT_STRIP_TRAILING_WHITESPACE
 		COMMAND_ECHO STDOUT

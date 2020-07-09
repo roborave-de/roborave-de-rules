@@ -47,7 +47,8 @@ function(add_latex_document LATEX_FILE)
 	get_filename_component(TARGET_NAME ${LATEX_FILE} NAME_WE)
 
 	add_custom_command(OUTPUT ${TARGET_NAME}.aux ${TARGET_NAME}.log ${TARGET_NAME}.pdf
-		COMMAND ${XELATEX_BIN} -output-directory ${CMAKE_CURRENT_BINARY_DIR}
+		COMMAND ${XELATEX_BIN}
+		ARGS -jobname=${TAG_YEAR}_${TARGET_NAME} -output-directory ${CMAKE_CURRENT_BINARY_DIR}
 		${LATEX_FILE} ${CMAKE_CURRENT_BINARY_DIR}/version.tex
 		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 		DEPENDS ${LATEX_FILE})

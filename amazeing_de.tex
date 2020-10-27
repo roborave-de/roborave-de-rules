@@ -19,20 +19,21 @@
 \clearscrheadfoot
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \begin{document}
+\input{theme.tex}
 \input{version.tex}
 \ohead{Regelstand: \commitDate, id: \commitID}
 \title{\tagYear\ a-MAZE-ing Challenge Regeln}
+
 \makeatletter
 \let\inserttitle\@title
 \makeatother
 \begin{center}
-	\includegraphics[width=0.5\textwidth]{logo.png}
-
+	\rrgerLogo
 	\huge                      % Schriftgröße einstellen
 	\bfseries                   % Fettdruck einschalten
+	\\
 	\inserttitle
 \end{center}
-
 \section{Ziel}
 Entwerfe, baue und programmiere einen Roboter, der einem erhöhten Holzlabyrinth
 folgen kann, ohne herunterzufallen. Das Abschließen des Labyrinths vor dem

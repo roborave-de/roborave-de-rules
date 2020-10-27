@@ -11,23 +11,28 @@
 \usepackage{makecell}
 \usepackage[table]{xcolor}
 \usepackage{float}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor,colortbl}
+\definecolor{Gray}{gray}{0.85}
 \usepackage[automark]{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \setmainfont[Mapping=tex-text]{Liberation Serif}
 \begin{document}
+\input{theme.tex}
 \input{version.tex}
 \ohead{Regelstand: \commitDate, id: \commitID}
 \title{\tagYear\ Fire Fighting Challenge Regeln}
+
 \makeatletter
 \let\inserttitle\@title
 \makeatother
 \begin{center}
-\includegraphics[width=0.5\textwidth]{logo.png}
-
-\huge                      % Schriftgröße einstellen
-\bfseries                   % Fettdruck einschalten
-\inserttitle
+	\rrgerLogo
+	\huge                      % Schriftgröße einstellen
+	\bfseries                   % Fettdruck einschalten
+	\\
+	\inserttitle
 \end{center}
 \section{Ziel}
 Entwerfe, baue und programmiere einen Roboter, der die 4 zufällig platzierten Kerzen innerhalb eines durch eine weiß-schwarze Linie umrissenen Feldes orten und löschen kann, ohne diese zu berühren.

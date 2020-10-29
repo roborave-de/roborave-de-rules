@@ -46,6 +46,7 @@ configure_file(version.tex.in version.tex @ONLY)
 # Configure theme
 # -----------------------------------------------------------------------------
 set(RRGER_LOGO "${CMAKE_CURRENT_SOURCE_DIR}/theme/logo.png")
+set(RRCYB_LOGO "${CMAKE_CURRENT_SOURCE_DIR}/theme/logo_cyberspace.png")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/theme/theme.tex.in" theme.tex @ONLY)
 
 function(add_latex_document LATEX_FILE)
@@ -71,3 +72,4 @@ add_latex_document(amazeing_de.tex)
 add_latex_document(jousting_de.tex)
 add_latex_document(linefollowing_de.tex)
 add_latex_document(sumobot_de.tex)
+add_latex_document(cyberspace_de.tex)

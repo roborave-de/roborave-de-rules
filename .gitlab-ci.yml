@@ -23,7 +23,7 @@ latex:
     - xelatex -jobname=${TAG_YEAR}_jousting_de -output-directory build/ jousting_de.tex build/version.tex build/theme.tex
   artifacts:
     paths:
-      - build/${CI_JOB_NAME}.pdf
+      - build/2022_jousting_de.pdf
 
 .pages:
   dependencies:
@@ -31,7 +31,7 @@ latex:
   stage: deploy
   script:
     - mkdir public/
-    - cp build/${CI_JOB_NAME%%_pages}.pdf public/
+    - cp build/${TAG_YEAR}_${CI_JOB_NAME%%_pages}.pdf public/
   artifacts:
       paths:
         - public

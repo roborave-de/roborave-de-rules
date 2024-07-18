@@ -1,0 +1,39 @@
+stages:
+  - build
+  - deploy
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH
+
+pdflatex:
+  stage: build
+  image: registry.gitlab.com/lmoellendorf/docker-latex
+  variables:
+    DEBIAN_FRONTEND: "noninteractive"
+  script:
+    - mkdir build/
+    - TAG_YEAR=$(git describe --tags --abbrev=0)
+    - echo "\newcommand{\commitID}{$(git rev-parse --short=8 HEAD)}" >> build/version.tex
+    - echo "\newcommand{\tagYear}{${TAG_YEAR}}" >> build/version.tex
+    - echo "\newcommand{\commitDate}{$(git --no-pager show -s --format=%as HEAD)}" >> build/version.tex
+    - xelatex -jobname=${TAG_YEAR}_jousting_de -output-directory build/ jousting_de.tex build/version.tex build/theme.tex
+  artifacts:
+    paths:
+      - build/${CI_JOB_NAME}.pdf
+
+.pages:
+  dependencies:
+    - pdflatex
+  stage: deploy
+  script:
+    - mkdir public/
+    - cp build/${CI_JOB_NAME%%_pages}.pdf public/
+  artifacts:
+      paths:
+        - public
+  #rules:
+  #  - if: $CI_COMMIT_BRANCH == "main"
+
+jousting_de_pages:
+  extends: .pages

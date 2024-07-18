@@ -1,3 +1,5 @@
+image: registry.gitlab.com/lmoellendorf/docker-latex
+
 stages:
   - build
   - deploy
@@ -8,7 +10,6 @@ workflow:
 
 pdflatex:
   stage: build
-  image: registry.gitlab.com/lmoellendorf/docker-latex
   variables:
     DEBIAN_FRONTEND: "noninteractive"
   script:

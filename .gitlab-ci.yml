@@ -8,15 +8,13 @@ workflow:
   rules:
     - if: $CI_COMMIT_BRANCH
 
-pdflatex:
+latex:
   stage: build
   variables:
     DEBIAN_FRONTEND: "noninteractive"
   script:
     - git config --global --add safe.directory '*'
     - mkdir build/
-    - ls -al
-    - ls -al ..
     - TAG_YEAR=$(git describe --tags --abbrev=0)
     - echo "\newcommand{\commitID}{$(git rev-parse --short=8 HEAD)}" >> build/version.tex
     - echo "\newcommand{\tagYear}{${TAG_YEAR}}" >> build/version.tex
@@ -28,7 +26,7 @@ pdflatex:
 
 .pages:
   dependencies:
-    - pdflatex
+    - latex
   stage: deploy
   script:
     - mkdir public/

@@ -13,7 +13,6 @@ latex:
   variables:
     DEBIAN_FRONTEND: "noninteractive"
   script:
-    - git config --global --add safe.directory '*'
     - mkdir build/
     - TAG_YEAR=$(git describe --tags --abbrev=0)
     - echo "\newcommand{\commitID}{$(git rev-parse --short=8 HEAD)}" >> build/version.tex

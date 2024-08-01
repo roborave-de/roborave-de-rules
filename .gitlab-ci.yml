@@ -50,48 +50,21 @@ cyberspace_de:
 cyberspace_en:
   extends: .latex
 
-.pages:
+pages:
   stage: deploy
   script:
     - mkdir public/
-    - cp build/${TAG_YEAR}_${CI_JOB_NAME%%_pages}.pdf public/
+    - cp build/*.pdf public/
   artifacts:
       paths:
         - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == "main"
-
-jousting_de_pages:
   dependencies:
     - jousting_de
-  extends: .pages
-
-amazeing_de_pages:
-  dependencies:
     - amazeing_de
-  extends: .pages
-
-sumobot_de_pages:
-  dependencies:
     - sumobot_de
-  extends: .pages
-
-linefollowing_de_pages:
-  dependencies:
     - linefollowing_de
-  extends: .pages
-
-firefighting_de_pages:
-  dependencies:
     - firefighting_de
-  extends: .pages
-
-cyberspace_de_pages:
-  dependencies:
     - cyberspace_de
-  extends: .pages
-
-cyberspace_en_pages:
-  dependencies:
     - cyberspace_en
-  extends: .pages
+  #rules:
+  #  - if: $CI_COMMIT_BRANCH == "main"

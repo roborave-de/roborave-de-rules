@@ -55,6 +55,7 @@ cyberspace_en:
   script:
     - mkdir public/
     - cp build/${TAG_YEAR}_${CI_JOB_NAME%%_pages}.pdf public/
+    - echo "<a href=\"${TAG_YEAR}_${CI_JOB_NAME%%_pages}.pdf\">${TAG_YEAR}_${CI_JOB_NAME%%_pages}.pdf</a>" >> public/index.html
   artifacts:
       paths:
         - public

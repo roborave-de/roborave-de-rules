@@ -32,6 +32,24 @@ workflow:
 jousting_de:
   extends: .latex
 
+amazeing_de:
+  extends: .latex
+
+sumobot_de:
+  extends: .latex
+
+linefollowing_de:
+  extends: .latex
+
+firefighting_de:
+  extends: .latex
+
+cyberspace_de:
+  extends: .latex
+
+cyberspace_en:
+  extends: .latex
+
 .pages:
   stage: deploy
   script:
@@ -46,4 +64,34 @@ jousting_de:
 jousting_de_pages:
   dependencies:
     - jousting_de
+  extends: .pages
+
+amazeing_de_pages:
+  dependencies:
+    - amazeing_de
+  extends: .pages
+
+sumobot_de_pages:
+  dependencies:
+    - sumobot_de
+  extends: .pages
+
+linefollowing_de_pages:
+  dependencies:
+    - linefollowing_de
+  extends: .pages
+
+firefighting_de_pages:
+  dependencies:
+    - firefighting_de
+  extends: .pages
+
+cyberspace_de_pages:
+  dependencies:
+    - cyberspace_de
+  extends: .pages
+
+cyberspace_en_pages:
+  dependencies:
+    - cyberspace_en
   extends: .pages

@@ -32,8 +32,6 @@ jousting_de:
   extends: .latex
 
 .pages:
-  dependencies:
-    - latex
   stage: deploy
   script:
     - mkdir public/
@@ -45,4 +43,6 @@ jousting_de:
   #  - if: $CI_COMMIT_BRANCH == "main"
 
 jousting_de_pages:
+  dependencies:
+    - jousting_de
   extends: .pages

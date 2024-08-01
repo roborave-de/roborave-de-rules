@@ -66,5 +66,5 @@ pages:
     - firefighting_de
     - cyberspace_de
     - cyberspace_en
-  #rules:
-  #  - if: $CI_COMMIT_BRANCH == "main"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"

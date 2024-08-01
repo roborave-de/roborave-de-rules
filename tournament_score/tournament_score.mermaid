@@ -1,0 +1,17 @@
+flowchart LR
+  p1[1. Platz] === s1[S1]
+  p8[8. Platz] === s1[S1]
+  p4[4. Platz] === s2[S2]
+  p5[5. Platz] === s2[S2]
+  p3[3. Platz] === s3[S3]
+  p6[6. Platz] === s3[S3]
+  p2[2. Platz] === s4[S4]
+  p7[7. Platz] === s4[S4]
+  s1 === f1[F1]
+  s2 === f1[F1]
+  s3 === f2[F2]
+  s4 === f2[F2]
+  f1 === w[Sieger]
+  f2 === w[Sieger]
+  class p1,p2,p3,p4,p5,p6,p7,p8,s1,s2,s3,s4,f1,f2 node
+  classDef node fill:#cf0a21,stroke:#cf0a21,stroke-width:4px;

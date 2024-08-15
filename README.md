@@ -30,3 +30,26 @@ make all
 - cmake
 - xelatex
 
+# Glossary
+
+| Intl           | Germany                     |
+|---------       |------------                 |
+|event attendee  |Veranstaltungsbesucher:innen |
+|event guest     |Zuschauer:innen              |
+|event director  |Veranstaltungsleitung        |
+|competition     |Wettbewerb                   |
+|division        |Altersgruppe                 |
+|heat [SPORT.]   |Lauf                         |
+|joust           |Tjost                        |
+|jousting        |Tjosten                      |
+|opponent        |Gegner:innen                 |
+|player          |Spieler:innen                |
+|referee         |Punktrichter:in              |
+|run             |Lauf                         |
+|robotic-product |Robotik-Produkt              |
+|robotic-system  |Robotik-System               |
+|scoring         |Wertung                      |
+|score           |Punkt                        |
+|store           |Stand                        |
+|track           |Bahn/Spielfeld               |
+|team            |Team                         |

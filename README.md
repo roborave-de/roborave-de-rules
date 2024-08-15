@@ -1,4 +1,4 @@
-Moved to 
+Moved to
 - [RoboRAVE Germany on Github](https://github.com/roborave-de/roborave-de-rules)
 - [RoboRAVE Germany on Gitlab](https://gitlab.com/roborave-de/roborave-de-rules)
 

@@ -28,6 +28,7 @@
 \begin{document}
 \input{theme.tex}
 \input{version.tex}
+\input{common.tex}
 \ohead{Regelstand: \commitDate, id: \commitID}
 \title{\tagYear\ a-MAZE-ing Challenge Regeln}
 
@@ -46,123 +47,180 @@ Entwerfe, baue und programmiere einen Roboter, der einem erhöhten Holzlabyrinth
 folgen kann, ohne herunterzufallen. Das Abschließen des Labyrinths vor dem
 Zeitlimit erhöht Deine Punktzahl um Bonuspunkte.
 
-\section{Altersgruppen}
-Die Teams, die an dieser Challenge teilnehmen, treten in den Altersgruppen
-Grundschule (ES) und Mittelstufe (MS) an. (Hinweis: Wenn in einer der beiden
-Divisionen weniger als 5 Teams angemeldet sind, hat der Veranstaltungsleiter
-die Möglichkeit, die Altersgruppen zu kombinieren)
+\section{Wer kann teilnehmen?}
+Teams aus 2 bis 4 Spieler:innen in \textbf{getrennten Altersgruppen}:
 
-\section{Roboter}
-Autonomer Roboter, basierend auf beliebiger Plattform, der \euro{1.500}  oder
-weniger kostet und die folgenden Designbedingungen erfüllt, die beim Check-In
-überprüft werden:
 \begin{itemize}
+	\item Grundschule (ES)
+	\item Mittelstufe (MS)
+\end{itemize}
+\combineDivisions
+
+\section{Anforderungen}
+\robotRequirements
+\begin{enumerate}
+	\item Bestehen des Check-Ins durch Ausführen grundlegender operativer
+		Bewegungen, wie sie in dieser Challenge benötigt werden
+	\item Check-In Verfahren:
+	\begin{enumerate}
+		\item Der Roboter kann sich ohne externe Sensoren oder
+			Fernsteuerung wie folgt bewegen:
+		\begin{enumerate}
+			\item eine beliebige Strecke vorwärts fahren,
+			\item dann eine Drehung in eine der beiden Richtungen
+				um $\approx 45^{\circ}$ oder mehr machen,
+			\item sich dann um einen beliebige Strecke vorwärts
+				bewegen.
+		\end{enumerate}
+	\end{enumerate}
 	\item Der Roboter darf keine externen Sensoren verwenden, die ihm
 		helfen, dem Labyrinth zu folgen; jedoch sind Drehgeber (Motor
 		Encoder) erlaubt.
 	\item Das Volumen des Roboters darf 65030 cm$^{3}$ nicht überschreiten.
-\end{itemize}
+\end{enumerate}
 
-\section{Allgemeine Spiel- und Punktregeln}
-\begin{itemize}
-	\item Der Veranstalter legt die Anzahl der erlaubten offiziellen Läufe
-		fest und die Anzahl dieser offiziellen Läufe, die für die
-		Gesamtpunktzahl gezählt werden, die zur Ermittlung der
-		Top-8-Teams, die an dem Turnier teilnehmen werden, verwendet
-		wird.
+\section{Allgemeine Spielregeln}
+\begin{enumerate}
+	\item \scoreRuns
 	\item Der Roboter hat 2 Minuten Zeit, um das Labyrinth abzuschließen,
 		wobei die Uhr von 120 Sekunden rückwärts läuft.
 	\item Die Teams können nach Bedarf üben, wobei sie sich mit anderen
-		übenden Teams abwechseln. Sollte die Bahn für einen offiziellen
-		Lauf benötigt werden, geben die Übungsteams die Bahn ab.
-	\item Jede abgeschlossene Gerade ist 50 Punkte wert. Eine Gerade gilt
-		als abgeschlossen, wenn ein beliebiger Teil des Roboters über
-		den Beginn der Markierungslinie der Wertungszone fährt.
-	\item Jeder abgeschlossene Winkel ist 100 Punkte wert. Ein Winkel gilt
-		als abgeschlossen, wenn ein beliebiger Teil des Roboters über
-		den Beginn der Markierungslinie der Wertungszone fährt.
+		übenden Teams abwechseln.
+	\item Sollte die Bahn für einen offiziellen Lauf benötigt werden, geben
+		die Übungsteams die Bahn ab.
+\end{enumerate}
+
+\section{Wettkampfspezifische Spielregeln}
+\begin{enumerate}
 	\item Wenn der Roboter aus dem Labyrinth fällt, bevor er die Ziellinie
 		erreicht hat, und noch Zeit übrig ist, bringe ihn zur
 		Startlinie zurück und versuche, das Labyrinth zu beenden.
 	\item Ein Roboter gilt als aus dem Labyrinth gefallen, wenn eines
 		seiner Räder die Oberfläche des Labyrinths \textbf{VOLLSTÄNDIG}
-		nicht mehr berührt.
-	\item Wenn der Roboter das Labyrinth nach Ablauf der Zeit nicht
-		beendet, entspricht der Punktestand demjenigen zurückgelegten
-		Abschnitt der Strecke, der am weitesten vom Start entfernt ist.
-	\item Wenn der Roboter das Labyrinth vor Ablauf der Zeit fertigstellt,
-		entspricht die Punktzahl der maximalen Punktzahl für seine
-		Altersgruppe, zuzüglich eines Bonus, bestehend aus 1 Punkt für
-		jede verbleibende Sekunde.
-\end{itemize}
+		nicht mehr berührt oder den Boden berührt.
+\end{enumerate}
 
 \section{Spielfeld Spezifikation}
-\begin{itemize}
+
+Bahn: Alle Challenge Maße sind ungefähre Angaben.
+\begin{enumerate}
 	\item Alle a-MAZE-ing Strecken werden so nah wie möglich an der
 		Zeichnung sein und aus Leimholz (oder einem ähnlichen lokal
-		beschafften Material) von 24 cm Breite und 2 cm Höhe gebaut. Es
-		gibt verschiedene Längen mit Kombinationen von 45, 90 und 135
-		Grad Kurven in beide Richtungen. (Anmerkung: Alle Challenge
-		Maße sind ungefähre Angaben).
-\end{itemize}
-\includegraphics[width=1.0\textwidth]{images/amazeing_allowed.png}
-\begin{itemize}
-	\item Die Teile werden normalerweise mit starkem Gewebeklebeband
-		zusammengeklebt. Sie können jedoch auch mit Schrauben oder
-		geklebten Verzahnungen verbunden werden. Unabhängig von der
-		verwendeten Methode werden alle erforderlichen Maßnahmen
-		ergriffen, um sicherzustellen, dass die Schienen so glatt und
-		frei von Unregelmäßigkeiten wie möglich sind.
+		beschafften Material) von 24 cm Breite und 2 cm Höhe gebaut.
+	\item Es gibt verschiedene Längen mit Kombinationen von 45, 90 und 135
+		Grad Kurven in beide Richtungen.
+	\item Ungeachtet der Methode, mit der die Teile zusammengefügt werden,
+		sollten ALLE Anstrengungen unternommen werden, um
+		sicherzustellen, dass die Bahnen so glatt und frei von
+		Unregelmäßigkeiten wie möglich sind.
 	\item In der Altersgruppe ES gibt es 4 Geraden und 3 Kurven was
 		insgesamt 500 Punkte ermöglich.
-	\item In der Altersgruppe MS gibt es 6 Geraden und 5 Kurven was
+	\item In der Altersgruppe MS gibt es 6 Geraden und 5 Winkel was
 		insgesamt 800 Punkte ermöglich.
 	\item Abhängig vom Veranstaltungsraum und dem verfügbaren Material
-		können beide Altersgruppe auf der längeren MS-Strecke betrieben
+		können beide Altersgruppe auf der längeren MS-Bahn betrieben
 		werden. In diesem Fall befindet sich die Ziellinie der
 		Altersgruppe ES irgendwo zwischen der 3. und 4. abgewinkelten
 		Kurve der MS-Bahn.
-	\item Wertungslinien:
+\end{enumerate}
+
+\subsection{A) Material, Bahnmuster und Details zum Zusammenbau}
+\begin{enumerate}
+	\item Bahnmaterial: Grobspanplatten, Spanplatten, MDF,
+		Mehrschichtplatte
+	\item Design für die Veranstaltung: Es gibt KEIN bestimmtes Design...
+		Es besteht freie Wahl, vorausgesetzt, alle 3 Winkel sind
+		vorhanden.
+	\item Winkel - die Hypotenuse wird an die gerade Bahn gelegt, aus der
+		sich der Roboter dreht
+\end{enumerate}
+
+\includegraphics[width=1.0\textwidth]{images/amazeing_allowed.png}
+
+\subsection{B) Befestigung der Bahn auf dem Boden: Klebeband, 5 cm breit}
+
+\begin{enumerate}
+	\item ausgehend vom Boden überquert das Klebeband ...
+	\item jedes Segmentverbindung.
+	\item Beide Enden werden am Boden befestigen
+	\item Ist Oberfläche auf der Bahn \emph{NICHT} glatt?
+		Nochmal neu kleben!
+	\item Linien für die Punktevergabe (die vorderen Räder müssen diese
+		Linien berühren, um die Punkte zu erhalten)
+	\begin{enumerate}
+		\item Zeichne Linien durch jedes Segment
 		\begin{enumerate}
-			\item Das folgende Diagramm zeigt die Platzierung der
-				Bewertungslinien für jeden der drei
-				Winkeltypen.
-			\item Start und Ziel sind markiert
-			\item Die Wertungslinien am Ende jeder Geraden und
-				jeder Kurve sind mit den auf der Fahrt vom
-				Start bis zum Ziel akkumulierten Punkten
-				beschriftet (dies vereinfacht die Überwachung
-				der Punkte).
-				\begin{center}
-					\begin{tabular}{|c|c|c|c|c|c|} \hline
-						\rowcolor{Gray}
-						1. Gerade & 1. Kurve & 2. Gerade & 2. Kurve & 3. Gerade & 3. Kurve  \\ \hline
-						50 & 150 & 200 & 300 & 350 & 450  \\ \hline
-						\rowcolor{Gray}
-						4. Gerade & 4. Kurve & 5. Gerade & 5. Kurve & 6. Gerade & \\ \hline
-						500 (ES Ziel) & 600 & 650 & 750 & 800 (MS Ziel) & \\ \hline
-					\end{tabular}
-				\end{center}
+			\item $\approx 20 cm$ vom Ende jeder Geraden entfernt
+			\item $\approx 10 cm$ innnerhalb der Winkel
 		\end{enumerate}
 		\includegraphics[width=1.0\textwidth]{images/amazeing_angle.png}
-\end{itemize}
+	\end{enumerate}
+	\item Markiere einen Bereich um jede Bahn, der NUR für die
+		Spieler:innen bestimmt ist - klebe ein helles Rechteck um den
+		Streckenbereich.
+	\item  Ein Streckendesign - zwei Herausforderungen.
+	\begin{itemize}
+		\item ES - die ersten 3 Geraden + Winkel zur 4.
+			Gerade
+		\item MS - ganze Bahn
+	\end{itemize}
+	\item Winkel - mindestens ein $45^{\circ}$ Winkel UND ein (1)
+		$135^{\circ}$ Winkel für den ES-Abschnitt
+	\item Überprüfe die fertige Bahn:
+	\begin{enumerate}
+		\item Glattheit des Klebebandes
+		\item Keine erhöhten Kanten zwischen den Brettern
+	\end{enumerate}
+\end{enumerate}
+
+\section{Punktevergabe}
+\begin{enumerate}
+	\item Jede abgeschlossene Gerade ist 50 Punkte wert.
+	\begin{enumerate}
+		\item Eine Gerade gilt als abgeschlossen, wenn die Vorderräder
+			die auf der Bahn markierte Wertungslinie berühren.
+	\end{enumerate}
+	\item Jeder abgeschlossene Winkel ist 100 Punkte wert.
+	\begin{enumerate}
+		\item Ein Winkel gilt als abgeschlossen, wenn die Vorderräder
+			die auf der Bahn markierte Wertungslinie berühren.
+	\end{enumerate}
+	\item In der Altersgruppe ES gibt es 4 Geraden und 3 Winkel was einer
+		Gesamtpunktzahl von 500 Punkten entspricht.
+	\item In der Altersgruppe MS gibt es 6 Geraden und 5 Winkel was einer
+		Gesamtpunktzahl von 800 Punkten entspricht.
+	\item Wenn der Roboter das Labyrinth nach Ablauf der Zeit nicht
+		beendet, entspricht der Punktestand demjenigen zurückgelegten
+		Abschnitt der Bahn, der am weitesten vom Start entfernt ist.
+	\item Wenn der Roboter das Labyrinth vor Ablauf der Zeit fertigstellt,
+		entspricht die Punktzahl der maximalen Punktzahl für seine
+		Altersgruppe, zuzüglich eines Bonus, bestehend aus 1 Punkt für
+		jede verbleibende volle Sekunde. (z.B. wenn $3,14s$ verbleiben,
+		gibt es 3 Bonuspunkte. Bei verbleibenden $12,94s$ gibt es 12
+		Bonuspunkte.
+\end{enumerate}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|} \hline
+		\rowcolor{Gray}
+		1. Gerade & 1. Kurve & 2. Gerade & 2. Kurve & 3. Gerade & 3. Kurve  \\ \hline
+		50 & 150 & 200 & 300 & 350 & 450  \\ \hline
+		\rowcolor{Gray}
+		4. Gerade & 4. Kurve & 5. Gerade & 5. Kurve & 6. Gerade & \\ \hline
+		500 (ES Ziel) & 600 & 650 & 750 & 800 (MS Ziel) & \\ \hline
+	\end{tabular}
+\end{center}
 
 \section{Turnierplan}
 \begin{itemize}
-	\item Die besten 8 Mannschaften jeder Altersklasse treten in einem
-		Turnier gegeneinander an.
+	\item Die besten 8 Teams jeder Altersgruppe treten in einem Turnier
+		gegeneinander an.
 	\item Gleichstand wird auf der Grundlage eines vom Veranstalter
-		gewählten LEISTUNGSKRITERIUMS aufgelöst. (Zum Beispiel: die
-		höchste Einzelwertung aller gleichwertigen Mannschaften).
-	\item Die aufsteigenden Teams werden entsprechend ihrer Gesamtpunktzahl
-		in die Turnierklasse gesetzt (siehe untenstehende Tabelle).
-		\begin{figure}[H]
-			\centering
-			\def\svgwidth{\columnwidth}
-			\includegraphics{tournament_score/tournament_score.pdf}
-		\end{figure}
-	\item Der zweite Platz ("`Runner Up"') wird verwendet, um den 3. Platz
-		auf der Grundlage des Ergebnisses der Halbfinalrunde zu
-		bestimmen.
+		gewählten \emph{LEISTUNGSKRITERIUMS} aufgelöst. (Zum Beispiel:
+		die höchste Einzelwertung aller gleichwertigen Teams).
+        \item \tournamentQualification
+	\item Die Plätze 3 und 4 werden auf der Grundlage der Ergebnisse der
+		Halbfinalspiele ermittelt.
 \end{itemize}
+\tournamentScoring
+\combinedTournament
 \end{document}

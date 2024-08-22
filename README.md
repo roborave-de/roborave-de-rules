@@ -34,6 +34,7 @@ make all
 
 | Intl           | Germany                     |
 |---------       |------------                 |
+|angled turn     |Abbiegung                    |
 |event attendee  |Veranstaltungsbesucher:innen |
 |event guest     |Zuschauer:innen              |
 |event director  |Veranstaltungsleitung        |

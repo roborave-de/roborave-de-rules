@@ -13,7 +13,6 @@ workflow:
   variables:
     DEBIAN_FRONTEND: "noninteractive"
   script:
-    - git fetch --tags
     - mkdir build/
     - echo "\newcommand{\rrgerLogo}{\includegraphics[width=0.5\textwidth]{${CI_PROJECT_DIR}/theme/logo.png}}" >> build/theme.tex
     - echo "\newcommand{\rrcybLogo}{\includegraphics[width=0.5\textwidth]{${CI_PROJECT_DIR}/theme/logo_cyberspace.png}}" >> build/theme.tex

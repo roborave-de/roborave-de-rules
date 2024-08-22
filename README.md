@@ -6,7 +6,7 @@ Moved to
 
 These are the rules of [RoboRAVE Germany](https://roborave.de). The rules are
 translated from the origiinal rules of
-[RoboRAVE International](https://www.roboraveinternational.org).
+[RoboRAVE International](https://roboraveinternational.org/#/challenges).
 
 
 # PDF Generation

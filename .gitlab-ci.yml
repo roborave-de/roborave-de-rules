@@ -16,7 +16,7 @@ workflow:
     - mkdir build/
     - echo "\newcommand{\rrgerLogo}{\includegraphics[width=0.5\textwidth]{${CI_PROJECT_DIR}/theme/logo.png}}" >> build/theme.tex
     - echo "\newcommand{\rrcybLogo}{\includegraphics[width=0.5\textwidth]{${CI_PROJECT_DIR}/theme/logo_cyberspace.png}}" >> build/theme.tex
-    - TAG_YEAR=$(git describe --tags --abbrev=0)
+    - TAG_YEAR=$(git describe --tags --abbrev=0 --always)
     - echo "TAG_YEAR=${TAG_YEAR}" >> $GITLAB_ENV
     - echo "TAG_YEAR=${TAG_YEAR}" >> build.env
     - echo "\newcommand{\commitID}{$(git rev-parse --short=8 HEAD)}" >> build/version.tex

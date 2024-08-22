@@ -34,6 +34,7 @@ make all
 
 | Intl           | Germany                     |
 |---------       |------------                 |
+|aggregate/total score |Gesamtpunktzahl        |
 |angled turn     |Abbiegung                    |
 |event attendee  |Veranstaltungsbesucher:innen |
 |event guest     |Zuschauer:innen              |

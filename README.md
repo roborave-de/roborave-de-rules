@@ -1,4 +1,4 @@
-Moved to 
+Moved to
 - [RoboRAVE Germany on Github](https://github.com/roborave-de/roborave-de-rules)
 - [RoboRAVE Germany on Gitlab](https://gitlab.com/roborave-de/roborave-de-rules)
 
@@ -6,7 +6,7 @@ Moved to
 
 These are the rules of [RoboRAVE Germany](https://roborave.de). The rules are
 translated from the origiinal rules of
-[RoboRAVE International](https://www.roboraveinternational.org).
+[RoboRAVE International](https://roboraveinternational.org/#/challenges).
 
 
 # PDF Generation
@@ -30,3 +30,28 @@ make all
 - cmake
 - xelatex
 
+# Glossary
+
+| Intl           | Germany                     |
+|---------       |------------                 |
+|aggregate/total score |Gesamtpunktzahl        |
+|angled turn     |Abbiegung                    |
+|event attendee  |Veranstaltungsbesucher:innen |
+|event guest     |Zuschauer:innen              |
+|event director  |Veranstaltungsleitung        |
+|competition     |Wettbewerb                   |
+|division        |Altersgruppe                 |
+|heat [SPORT.]   |Lauf                         |
+|joust           |Tjost                        |
+|jousting        |Tjosten                      |
+|opponent        |Gegner:innen                 |
+|player          |Spieler:innen                |
+|referee         |Punktrichter:in              |
+|run             |Lauf                         |
+|robotic-product |Robotik-Produkt              |
+|robotic-system  |Robotik-System               |
+|scoring         |Wertung                      |
+|score           |Punkt                        |
+|store           |Stand                        |
+|track           |Bahn/Spielfeld               |
+|team            |Team                         |

@@ -44,6 +44,9 @@ linefollowing_de:
 firefighting_de:
   extends: .latex
 
+entrepreneurial_de:
+  extends: .latex
+
 cyberspace_de:
   extends: .latex
 
@@ -64,6 +67,7 @@ pages:
     - sumobot_de
     - linefollowing_de
     - firefighting_de
+    - entrepreneurial_de
     - cyberspace_de
     - cyberspace_en
   rules:
